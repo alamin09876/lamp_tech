@@ -1,0 +1,28 @@
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+
+  width: 450px;
+  height: 500px;
+}
+
+/* .first-swiper {
+  transform: skew(80deg, 40deg);
+  right: 20px;
+}
+.second-swiper {
+  transform: skew(40deg, 80deg);
+  left: 20px;
+} */
+
+.swiper-slide img {
+  display: block;
+  width: 30%;
+  height: 25%;
+  padding: 20px;
+}
