@@ -49,7 +49,7 @@ const ReviewSwiper = () => {
     <div className="grid sm:grid-cols-2 gap-2 py-10 justify-between select-none">
       {/* Left side image block */}
       <div>
-        <div className="relative ml-32">
+        <div className="relative lg:ml-32">
           <Image
             src={reviews[activeIndex].image}
             width={350}
@@ -57,7 +57,7 @@ const ReviewSwiper = () => {
             alt="Review"
             className="w-[400px] h-[450px] border-2 border-[#062D3E] rounded-4xl"
           />
-          <div className="absolute -top-9 right-0 left-87">
+          <div className="absolute lg:-top-9 -top-7 right-0 lg:left-87 left-72">
             <Image
               src={imageTwo}
               width={350}
@@ -66,7 +66,7 @@ const ReviewSwiper = () => {
               className="object-contain w-[100px] h-[80px]"
             />
           </div>
-          <div className="absolute -top-3 right-0 left-[374px]">
+          <div className="absolute -top-1 right-0 lg:left-[374px] left-[300px]">
             <Image
               src={imageOne}
               width={350}
@@ -84,7 +84,7 @@ const ReviewSwiper = () => {
           <h2 className="text-[#062D3E] text-[22px] md:text-[26px] font-semibold text-center mt-10">
             Customer Reviews
           </h2>
-          <div className="absolute -top-12 right-0 left-[400px]">
+          <div className="absolute -top-2 right-0 lg:left-[400px] lg-[300px]">
             <Image
               src={imageThree}
               width={350}
@@ -110,7 +110,7 @@ const ReviewSwiper = () => {
           {reviews.map((review, index) => (
             <SwiperSlide key={index}>
               <div
-                className="bg-white border border-[#C8C8C8] p-6 text-[#333] text-[16px] leading-relaxed shadow-md max-w-md relative"
+                className="bg-white border border-[#C8C8C8] lg:p-6 p-4 text-[#333] lg:text-[16px] text-[10px] leading-relaxed shadow-md max-w-md relative"
                 style={{
                   clipPath:
                     "polygon(11% 99%, 0 90%, 0 0, 100% 0, 100% 20%, 100% 86%, 89% 100%, 78% 86%, 68% 99%, 55% 89%, 42% 100%, 28% 89%)",

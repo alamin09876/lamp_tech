@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { FaRegHeart } from "react-icons/fa";
 import image from "../../../public/assest/cardImage/image_2__2_-removebg-preview 1.png";
 import imageOne from "../../../public/assest/cardImage/image_3-removebg-preview (1) 1.png";
 import imageTwo from "../../../public/assest/cardImage/image_4-removebg-preview (1) 1.png";
@@ -17,6 +18,9 @@ const cardData = [
 const ProductCards = () => {
   return (
     <div className="pb-10">
+      <div className="pl-20 py-10">
+        <h2 className="text-2xl">Our Best Products</h2>
+      </div>
       <div className="mx-20 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {cardData.map((card) => (
           <div key={card.id} className="rounded-lg bg-white shadow-lg p-4">
@@ -28,21 +32,8 @@ const ProductCards = () => {
                 alt="Short Sleeve Shirt"
                 className="mx-auto object-cover w-[200px] h-[200px]"
               />
-              <button className="absolute top-2 right-2 p-2 hover:text-red-500">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
-                </svg>
+              <button className="absolute top-2 right-2 p-2 hover:text-red-500 border bg-white rounded-4xl">
+                <FaRegHeart />
               </button>
             </div>
             <div className="mt-4 space-y-3">

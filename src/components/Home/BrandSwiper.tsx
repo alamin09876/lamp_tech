@@ -9,6 +9,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "./styles.css";
 
+import imageOne from "../../../public/assest/brandSwiper/Frame (1).png";
+import imageTwo from "../../../public/assest/brandSwiper/Frame.png";
 import image from "../../../public/assest/brandSwiper/Group 143725932.png";
 
 const BrandSwiper = () => {
@@ -37,6 +39,29 @@ const BrandSwiper = () => {
 
   return (
     <div className="relative bg-[#fff4e0] py-12 clip-wrapper">
+      <div className=" grid lg:grid-cols-12 col-span-1  gap-4">
+        <div className="lg:col-span-1">
+          <Image
+            src={imageTwo}
+            width={130}
+            height={70}
+            alt="brand"
+            className=" object-contain items-start flex justify-start "
+          />
+        </div>
+        <div className="lg:col-span-10 ">
+          <h2 className="text-2xl">Our Brands</h2>
+        </div>
+        <div className="lg:col-span-1 ">
+          <Image
+            src={imageOne}
+            width={100}
+            height={70}
+            alt="brand"
+            className=" object-contain items-start flex justify-start "
+          />
+        </div>
+      </div>
       <div className="clip-swiper">
         <Swiper
           grabCursor={true}

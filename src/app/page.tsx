@@ -5,12 +5,6 @@ import ProductCards from "@/components/Home/ProductCards";
 import ReviewSwiper from "@/components/Home/ReviewSwiper";
 import SubscribeSection from "@/components/Home/SubscribeSection";
 import Footer from "@/components/Shared/Footer";
-// import BrandSwiper from "@/components/Home/BrandSwiper";
-// import ComfortSection from "@/components/Home/ComfortSection";
-// import ProductCards from "@/components/Home/ProductCards";
-// import ReviewSwiper from "@/components/Home/ReviewSwiper";
-// import SubscribeSection from "@/components/Home/SubscribeSection";
-// import Footer from "@/components/Shared/Footer";
 import Header from "@/components/Shared/Header";
 
 export default function Home() {
