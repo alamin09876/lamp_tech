@@ -1,143 +1,82 @@
-// Import Swiper React components
 "use client";
-import { Swiper, SwiperSlide } from "swiper/react";
-import image from "../../../public/assest/brandSwiper/Group 143725932.png";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-
-import "./styles.css";
-
-// import required modules
 import Image from "next/image";
 import Link from "next/link";
 import { Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "./styles.css";
+
+import image from "../../../public/assest/brandSwiper/Group 143725932.png";
 
 const BrandSwiper = () => {
+  const brands = [
+    {
+      title: "Shirts",
+      description:
+        "Comfort is key — and ONLY shirts deliver. Made from soft cotton, breathable viscose, and sustainable blends, they’re lightweight, gentle on the skin, and ideal for all-day wear. ",
+    },
+    {
+      title: "Earping",
+      description:
+        "Comfort is key — and ONLY shirts deliver. Made from soft cotton, breathable viscose, and sustainable blends, they’re lightweight, gentle on the skin, and ideal for all-day wear. ",
+    },
+    {
+      title: "Port",
+      description:
+        "Comfort is key — and ONLY shirts deliver. Made from soft cotton, breathable viscose, and sustainable blends, they’re lightweight, gentle on the skin, and ideal for all-day wear. ",
+    },
+    {
+      title: "Port",
+      description:
+        "Comfort is key — and ONLY shirts deliver. Made from soft cotton, breathable viscose, and sustainable blends, they’re lightweight, gentle on the skin, and ideal for all-day wear. ",
+    },
+  ];
+
   return (
-    <Swiper
-      // effect={"coverflow"}
-      grabCursor={true}
-      centeredSlides={true}
-      slidesPerView={2}
-      // coverflowEffect={{
-      //   rotate: 20,
-      //   stretch: -40,
-      //   depth: 400,
-      //   modifier: 1,
-      //   slideShadows: true,
-      // }}
-      spaceBetween={40}
-      modules={[Pagination]}
-      className="mySwiper "
-    >
-      <SwiperSlide className="rounded-4xl bg-[#FBBD08] first-swiper">
-        <Image
-          src={image}
-          width={200}
-          height={150}
-          alt="Picture of the author"
-        />
-        <p className="text-2xl text-[#062D3E] pl-6 pb-6">Shirts</p>
-        <p className="text-sm text-[#062D3E] pl-6 pb-20">
-          Comfort is key — and ONLY shirts deliver. Made from soft cotton,
-          breathable viscose, and sustainable blends, they’re lightweight,
-          gentle on the skin, and ideal for all-day wear.{" "}
-        </p>
-        <Link
-          href="#"
-          className="w-full ml-6 py-3 text-center px-6 rounded-full text-[#062D3E] font-medium border border-[#062D3E]  hover:text-white transition-colors hover:bg-[#062D3E]"
+    <div className="relative bg-[#fff4e0] py-12 clip-wrapper">
+      <div className="clip-swiper">
+        <Swiper
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={2}
+          spaceBetween={40}
+          modules={[Pagination]}
+          className="mySwiper"
         >
-          Explore
-        </Link>
-      </SwiperSlide>
-      <SwiperSlide className="bg-[#FBBD08] w-[400px] h-[400px] rounded-4xl second-swiper">
-        <Image
-          src={image}
-          width={200}
-          height={150}
-          alt="Picture of the author"
-          className="w-[11px] h-[111px]"
-        />
-        <p className="text-2xl text-[#062D3E] pl-6 pb-6">Shirts</p>
-        <p className="text-sm text-[#062D3E] pl-6 pb-20">
-          Comfort is key — and ONLY shirts deliver. Made from soft cotton,
-          breathable viscose, and sustainable blends, they’re lightweight,
-          gentle on the skin, and ideal for all-day wear.{" "}
-        </p>
-        <Link
-          href="#"
-          className="w-full ml-6 py-3 text-center px-6 rounded-full text-[#062D3E] font-medium border border-[#062D3E]  hover:text-white transition-colors hover:bg-[#062D3E]"
-        >
-          Explore
-        </Link>
-      </SwiperSlide>
-      <SwiperSlide className="bg-[#FBBD08] w-[400px] h-[400px] rounded-4xl first-swiper">
-        <Image
-          src={image}
-          width={200}
-          height={150}
-          alt="Picture of the author"
-          className="w-[11px] h-[111px]"
-        />
-        <p className="text-2xl text-[#062D3E] pl-6 pb-6">Shirts</p>
-        <p className="text-sm text-[#062D3E] pl-6 pb-20">
-          Comfort is key — and ONLY shirts deliver. Made from soft cotton,
-          breathable viscose, and sustainable blends, they’re lightweight,
-          gentle on the skin, and ideal for all-day wear.{" "}
-        </p>
-        <Link
-          href="#"
-          className="w-full ml-6 py-3 text-center px-6 rounded-full text-[#062D3E] font-medium border border-[#062D3E]  hover:text-white transition-colors hover:bg-[#062D3E]"
-        >
-          Explore
-        </Link>
-      </SwiperSlide>
-      <SwiperSlide className="hover:bg-[#FBBD08] w-[400px] h-[400px] rounded-4xl second-swiper">
-        <Image
-          src={image}
-          width={200}
-          height={150}
-          alt="Picture of the author"
-          className="w-[11px] h-[111px]"
-        />
-        <p className="text-2xl text-[#062D3E] pl-6 pb-6">Shirts</p>
-        <p className="text-sm text-[#062D3E] pl-6 pb-20">
-          Comfort is key — and ONLY shirts deliver. Made from soft cotton,
-          breathable viscose, and sustainable blends, they’re lightweight,
-          gentle on the skin, and ideal for all-day wear.{" "}
-        </p>
-        <Link
-          href="#"
-          className="w-full ml-6 py-3 text-center px-6 rounded-full text-[#062D3E] font-medium border border-[#062D3E]  hover:text-white transition-colors hover:bg-[#062D3E]"
-        >
-          Explore
-        </Link>
-      </SwiperSlide>
-      <SwiperSlide className="hover:bg-[#FBBD08] w-[400px] h-[400px] rounded-4xl first-swiper">
-        <Image
-          src={image}
-          width={200}
-          height={150}
-          alt="Picture of the author"
-          className="w-[11px] h-[111px]"
-        />
-        <p className="text-2xl text-[#062D3E] pl-6 pb-6">Shirts</p>
-        <p className="text-sm text-[#062D3E] pl-6 pb-20">
-          Comfort is key — and ONLY shirts deliver. Made from soft cotton,
-          breathable viscose, and sustainable blends, they’re lightweight,
-          gentle on the skin, and ideal for all-day wear.{" "}
-        </p>
-        <Link
-          href="#"
-          className="w-full ml-6 py-3 text-center px-6 rounded-full text-[#062D3E] font-medium border border-[#062D3E]  hover:text-white transition-colors hover:bg-[#062D3E]"
-        >
-          Explore
-        </Link>
-      </SwiperSlide>
-    </Swiper>
+          {brands.map((brand, index) => (
+            <SwiperSlide
+              key={index}
+              className={`hover:bg-[#FBBD08] w-[500px] h-[600px] px-10 py-10 border-2 border-[#EBE3CC] flex flex-col justify-between overflow-hidden ${
+                index % 2 === 0 ? "even-clip" : "odd-clip"
+              } rounded-4xl `}
+            >
+              <div className="flex flex-col ">
+                <Image
+                  src={image}
+                  width={100}
+                  height={70}
+                  alt="brand"
+                  className=" object-contain items-start flex justify-start "
+                />
+                <p className="text-2xl text-[#062D3E] pt-4">{brand.title}</p>
+                <p className="text-sm text-[#062D3E] pt-6 pb-6">
+                  {brand.description}
+                </p>
+              </div>
+              <Link
+                href="#"
+                className="w-full mt-6 py-3 text-center px-6 rounded-full text-[#062D3E] font-medium border border-[#062D3E] hover:text-white transition-colors hover:bg-[#062D3E]"
+              >
+                Explore
+              </Link>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </div>
   );
 };
 

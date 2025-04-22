@@ -123,7 +123,7 @@ const ReviewSwiper = () => {
         </Swiper>
 
         {/* Navigation Arrows */}
-        <div className="flex items-center gap-2 -mt-72">
+        <div className="flex items-center gap-2 mt-6">
           <button
             onClick={handlePrev}
             className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-800 transition-all shadow-md"
