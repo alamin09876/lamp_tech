@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import modelImage from "../../../public/assest/HeroImage/Group 143725924.png"; // Replace with your image path
+import modelImage from "../../../public/assest/HeroImage/Group 143725924.png";
 
 const SignUp = () => {
   return (

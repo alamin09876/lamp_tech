@@ -35,7 +35,7 @@ export default function Header() {
 
         {/* Desktop Auth Buttons */}
         <div className="hidden md:flex gap-4 items-center">
-          <Link href="#" className="text-sm hover:text-orange-600">
+          <Link href="/login" className="text-sm hover:text-orange-600">
             Log in
           </Link>
           <Link
