@@ -1,27 +1,51 @@
 "use client";
+
+import { useAuth } from "@/context/AuthContext";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 import shoppingGirl from "../../../public/assest/HeroImage/Group 143725924.png";
 
 export default function LogIn() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { login } = useAuth();
+  const router = useRouter();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      await login(email, password);
+      router.push("/dashboard"); // Redirect after login
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } catch (error: any) {
+      alert(
+        "Login failed: " + (error.response?.data?.message || error.message)
+      );
+    }
+  };
+
   return (
     <div className="flex min-h-screen">
-      {/* Left Section - Form */}
       <div className="w-full md:w-1/2 bg-[#f7ebd9] flex items-center justify-center px-6 py-12">
         <div className="w-full max-w-md">
           <h2 className="text-2xl md:text-3xl font-semibold text-center mb-8 text-[#102030]">
             Log In
           </h2>
 
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label className="block text-sm font-medium text-[#102030] mb-1">
                 Email <span className="text-red-500">*</span>
               </label>
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Ex: Johndoe@gmail.com"
                 className="w-full px-4 py-2 border rounded-md bg-white text-[#102030] focus:outline-orange-400"
+                required
               />
             </div>
 
@@ -32,14 +56,17 @@ export default function LogIn() {
               <div className="flex justify-between items-center">
                 <input
                   type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   placeholder="**********"
                   className="w-full px-4 py-2 border rounded-md bg-white text-[#102030] focus:outline-orange-400"
+                  required
                 />
               </div>
               <div className="flex justify-end">
                 <Link
                   href="#"
-                  className="ml-2 text-sm text-orange-500 hover:underline whitespace-nowrap "
+                  className="ml-2 text-sm text-orange-500 hover:underline whitespace-nowrap"
                 >
                   Forgot Password
                 </Link>
@@ -63,7 +90,6 @@ export default function LogIn() {
         </div>
       </div>
 
-      {/* Right Section - Image */}
       <div className="hidden md:flex w-1/2 bg-[#f7ebd9] items-end justify-center">
         <Image
           src={shoppingGirl}

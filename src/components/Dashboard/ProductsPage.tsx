@@ -1,6 +1,4 @@
 "use client";
-// import { Button } from "@/components/ui/button";
-// import { Input } from "@/components/ui/input";
 import { Pencil, Trash2 } from "lucide-react";
 import { useState } from "react";
 
@@ -45,7 +43,6 @@ export default function ProductsPage() {
 
   return (
     <div className="flex h-screen">
-      {/* Sidebar */}
       <aside className="w-1/5 bg-orange-600 text-white flex flex-col items-center py-8">
         <div className="font-bold text-2xl mb-8">Shop-First</div>
         <div className="w-full px-4">
@@ -55,7 +52,6 @@ export default function ProductsPage() {
         </div>
       </aside>
 
-      {/* Main content */}
       <main className="flex-1 bg-gray-100 p-8">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-2xl font-bold">Products</h1>

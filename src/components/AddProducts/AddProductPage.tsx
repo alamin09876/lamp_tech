@@ -1,7 +1,5 @@
 "use client";
 import { useState } from "react";
-// import { Button } from "@/components/ui/button";
-// import { Input } from "@/components/ui/input";
 
 export default function AddProductPage() {
   const [productName, setProductName] = useState("");
@@ -10,7 +8,6 @@ export default function AddProductPage() {
 
   return (
     <div className="flex h-screen">
-      {/* Sidebar */}
       <aside className="w-1/5 bg-orange-600 text-white flex flex-col items-center py-8">
         <div className="font-bold text-2xl mb-8">Shop-First</div>
         <div className="w-full px-4">
@@ -20,7 +17,6 @@ export default function AddProductPage() {
         </div>
       </aside>
 
-      {/* Main Content */}
       <main className="flex-1 bg-gray-100 p-8">
         <div className="flex items-center mb-6">
           <button className="text-orange-600 mr-4">⬅</button>
@@ -60,7 +56,6 @@ export default function AddProductPage() {
               </label>
               <textarea
                 className="w-full border border-blue-200 bg-blue-50 rounded-md p-3 outline-none focus:ring-2 focus:ring-blue-400"
-                // rows="5"
                 placeholder="Enter product details"
                 value={detail}
                 onChange={(e) => setDetail(e.target.value)}

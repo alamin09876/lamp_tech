@@ -39,35 +39,52 @@ const BrandSwiper = () => {
 
   return (
     <div className="relative bg-[#fff4e0] py-12 clip-wrapper">
-      <div className=" grid lg:grid-cols-12 col-span-1  gap-4">
-        <div className="lg:col-span-1">
+      <div className="grid lg:grid-cols-12 col-span-1 gap-4">
+        {/* Left Image - Hidden on small devices */}
+        <div className="hidden lg:block lg:col-span-1">
           <Image
             src={imageTwo}
             width={130}
             height={70}
             alt="brand"
-            className=" object-contain items-start flex justify-start "
+            className="object-contain"
           />
         </div>
-        <div className="lg:col-span-10 ">
+
+        {/* Title */}
+        <div className="col-span-12 lg:col-span-10 text-center lg:text-left">
           <h2 className="text-2xl">Our Brands</h2>
         </div>
-        <div className="lg:col-span-1 ">
+
+        {/* Right Image - Hidden on small devices */}
+        <div className="hidden lg:block lg:col-span-1">
           <Image
             src={imageOne}
             width={100}
             height={70}
             alt="brand"
-            className=" object-contain items-start flex justify-start "
+            className="object-contain"
           />
         </div>
       </div>
+
       <div className="clip-swiper">
         <Swiper
           grabCursor={true}
           centeredSlides={true}
-          slidesPerView={2}
           spaceBetween={40}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+              centeredSlides: false,
+            },
+            640: {
+              slidesPerView: 1,
+            },
+            1024: {
+              slidesPerView: 2,
+            },
+          }}
           modules={[Pagination]}
           className="mySwiper"
         >
@@ -76,15 +93,15 @@ const BrandSwiper = () => {
               key={index}
               className={`hover:bg-[#FBBD08] w-[500px] h-[600px] px-10 py-10 border-2 border-[#EBE3CC] flex flex-col justify-between overflow-hidden ${
                 index % 2 === 0 ? "even-clip" : "odd-clip"
-              } rounded-4xl `}
+              } rounded-4xl`}
             >
-              <div className="flex flex-col ">
+              <div className="flex flex-col">
                 <Image
                   src={image}
                   width={100}
                   height={70}
                   alt="brand"
-                  className=" object-contain items-start flex justify-start "
+                  className="object-contain items-start flex justify-start"
                 />
                 <p className="text-2xl text-[#062D3E] pt-4">{brand.title}</p>
                 <p className="text-sm text-[#062D3E] pt-6 pb-6">

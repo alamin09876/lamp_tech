@@ -7,35 +7,39 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="text-[#102030]">
-      <div className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+    <header className="text-[#102030] bg-[#ebe3cc] pt-4">
+      <div className="flex items-center justify-between px-6 max-w-7xl mx-auto">
+        {/* Logo */}
         <div className="text-lg font-semibold">
           <Link href={"/"}>Shop-First</Link>
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-6 items-center">
+        <nav className="hidden md:flex gap-6 items-center text-sm font-medium">
           <Link
             href="/"
-            className="relative text-sm hover:text-orange-600 transition duration-300"
+            className="relative hover:text-orange-600 transition duration-300"
           >
             Home
             <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-8 h-2 bg-[url('/wave.svg')] bg-no-repeat bg-contain"></span>
           </Link>
-          <Link href="#" className="text-sm hover:text-orange-600 transition">
+          <Link href="#" className="hover:text-orange-600 transition">
             Brand
           </Link>
-          <Link href="#" className="text-sm hover:text-orange-600 transition">
+          <Link href="#" className="hover:text-orange-600 transition">
             Products
           </Link>
-          <Link href="#" className="text-sm hover:text-orange-600 transition">
+          <Link href="#" className="hover:text-orange-600 transition">
             Reviews
           </Link>
         </nav>
 
-        {/* Desktop Auth Buttons */}
-        <div className="hidden md:flex gap-4 items-center">
-          <Link href="/login" className="text-sm hover:text-orange-600">
+        {/* Auth Buttons */}
+        <div className="bg-[#062D3E] px-[120px] py-2 -mr-16 hidden md:flex items-center gap-4">
+          <Link
+            href="/login"
+            className="text-sm text-orange-500 hover:text-orange-300"
+          >
             Log in
           </Link>
           <Link
@@ -46,7 +50,7 @@ export default function Header() {
           </Link>
         </div>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile menu toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden text-orange-500"
@@ -55,11 +59,11 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Nav */}
       {mobileOpen && (
         <div className="md:hidden bg-[#EFE6D0] px-6 pb-4">
           <nav className="flex flex-col gap-4">
-            <Link href="#" className="text-sm hover:text-orange-600">
+            <Link href="/" className="text-sm hover:text-orange-600">
               Home
             </Link>
             <Link href="#" className="text-sm hover:text-orange-600">
@@ -73,7 +77,7 @@ export default function Header() {
             </Link>
           </nav>
           <div className="mt-4 flex flex-col gap-2">
-            <Link href="#" className="text-sm hover:text-orange-600">
+            <Link href="/login" className="text-sm hover:text-orange-600">
               Log in
             </Link>
             <Link
