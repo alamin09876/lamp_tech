@@ -40,7 +40,7 @@ export default function Header() {
         <div
           className={`${
             pathname === "/" ? "bg-[#062D3E]" : ""
-          } px-[120px] py-[12px] -mr-16 hidden md:flex items-center gap-4 `}
+          } px-[117px] py-[12px] -mr-[58px] hidden md:flex items-center gap-4 `}
         >
           <Link
             href="/login"
