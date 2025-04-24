@@ -15,16 +15,26 @@ export const setAuthToken = (token: string | null) => {
   }
 };
 
-// 🔥 SIGNUP API function
+// Signup
 interface SignupPayload {
   name: string;
   email: string;
   phone: string;
   password: string;
 }
-
 export const signup = async (data: SignupPayload) => {
   const response = await api.post("/public/user/store", data);
+  return response.data;
+};
+
+// Create Product
+interface ProductPayload {
+  product_name: string;
+  product_price: string;
+  product_details: string;
+}
+export const createProduct = async (data: ProductPayload) => {
+  const response = await api.post("/user/product/store", data);
   return response.data;
 };
 

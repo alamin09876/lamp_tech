@@ -35,15 +35,7 @@ const HeroSection = () => {
             />
           </div>
         </div>
-        {/* <h1 className="mt-4 text-4xl md:text-6xl font-extrabold text-[#0A2A34] leading-tight">
-          <div className="flex">
-            EVERYTHING <br /> <span className="text-orange-500">YOU NEED</span>,
-            ALL
-            <Image src={imageOne} width={70} height={40} alt="Decoration" />
-          </div>{" "}
-          <br />
-          <br className="md:hidden" /> IN ONE PLACE
-        </h1> */}
+
         <button className="mt-6 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded-full text-sm transition">
           Shop Now
         </button>
