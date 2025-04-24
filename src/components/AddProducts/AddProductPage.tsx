@@ -39,7 +39,7 @@ export default function AddProductPage() {
       <aside className="w-full md:w-1/5 bg-orange-600 text-white flex flex-row md:flex-col justify-between md:items-center px-4 py-4 md:py-8">
         <div className="flex flex-col md:items-center md:gap-8 w-full">
           <div className="font-bold text-xl md:text-2xl mb-4 md:mb-8">
-            Shop-First
+            <Link href={"/"}>Shop-First</Link>
           </div>
           <div className="flex items-center gap-2 bg-[#062D3E] px-4 py-2 rounded">
             <TbCertificate2 />

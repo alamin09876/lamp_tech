@@ -50,7 +50,7 @@ export default function ProductsPage() {
     <div className="flex flex-col lg:flex-row h-screen overflow-auto">
       <aside className="w-full lg:w-1/5 bg-orange-600 text-white flex lg:flex-col items-center justify-between lg:justify-start py-4 px-4">
         <div className="font-bold text-xl lg:text-2xl mb-4 lg:mb-8">
-          Shop-First
+          <Link href={"/"}>Shop-First</Link>
         </div>
         <div className="flex items-center bg-[#062D3E] px-4 py-2 rounded-md gap-3">
           <TbCertificate2 className="text-xl" />
