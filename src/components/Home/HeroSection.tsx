@@ -8,18 +8,17 @@ import girl from "../../../public/assest/HeroImage/Group 143725924.png";
 
 const HeroSection = () => {
   return (
-    <div className="relative bg-[#EFE6D0] min-h-[700px] overflow-hidden">
-      {/* Text & CTA Section */}
+    <div className="relative bg-[#EFE6D0] min-h-[650px] overflow-hidden">
       <div className="max-w-6xl mx-auto pt-24 pl-8 md:pl-24">
-        <p className="text-sm text-blue-500 flex items-center gap-2">
-          <span className="text-pink-500 text-lg">
+        <p className="lg:text-2xl text-sm text-blue-500 flex items-center gap-2">
+          <span className="text-pink-500 ">
             <Image src={imageOne} width={70} height={40} alt="Decoration" />
           </span>{" "}
           Available in select states
         </p>
         <div className="flex">
           <div>
-            <h2 className="mt-4 text-4xl md:text-6xl font-extrabold text-[#0A2A34] leading-tight">
+            <h2 className="mt-4 lg:text-7xl text-4xl md:text-6xl font-bold text-[#0A2A34] leading-tight">
               Everything <br />{" "}
               <span className="text-orange-500">YOU NEED</span>, All <br />
               in One Place
@@ -36,7 +35,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <button className="mt-6 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded-full text-sm transition">
+        <button className="mt-6 bg-[#ED5C01] hover:bg-orange-600 text-white font-medium px-6 py-4 rounded-full text-xl transition mx-auto">
           Shop Now
         </button>
       </div>

@@ -5,48 +5,46 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export default function Header() {
+  const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const pathname = usePathname(); // Get current path
 
-  const isHome = pathname === "/";
+  const navLinks = [
+    { label: "Home", href: "/" },
+    { label: "Brand", href: "#" },
+    { label: "Products", href: "#" },
+    { label: "Reviews", href: "#" },
+  ];
+
+  const renderLink = (label: string, href: string) => (
+    <Link
+      key={label}
+      href={href}
+      className="relative inline-block text-sm font-medium px-6 py-4 text-[#102030] hover:text-white transition duration-300"
+    >
+      <span className="relative z-10">{label}</span>
+      <span className="absolute inset-0 bg-[url('/assest/HeroImage/Frame.png')] bg-no-repeat bg-center bg-contain opacity-0 hover:opacity-100 transition-opacity duration-300"></span>
+    </Link>
+  );
 
   return (
-    <header className="text-[#102030] bg-[#ebe3cc] pt-4">
+    <header className="text-[#102030] bg-[#ebe3cc] ">
       <div className="flex items-center justify-between px-6 max-w-7xl mx-auto">
-        {/* Logo */}
-        <div className="text-lg font-semibold">
+        <div className="text-xl font-semibold">
           <Link href={"/"}>Shop-First</Link>
         </div>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-6 items-center text-sm font-medium">
-          <Link
-            href="/"
-            className="relative hover:text-orange-600 transition duration-300"
-          >
-            Home
-            <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-8 h-2 bg-[url('/wave.svg')] bg-no-repeat bg-contain"></span>
-          </Link>
-          <Link href="#" className="hover:text-orange-600 transition">
-            Brand
-          </Link>
-          <Link href="#" className="hover:text-orange-600 transition">
-            Products
-          </Link>
-          <Link href="#" className="hover:text-orange-600 transition">
-            Reviews
-          </Link>
+        <nav className="hidden md:flex gap-6 items-center text-sm">
+          {navLinks.map((link) => renderLink(link.label, link.href))}
         </nav>
 
-        {/* Auth Buttons (only dark bg on home page) */}
         <div
           className={`${
-            isHome ? "bg-[#062D3E]" : ""
-          } px-[120px] py-2 -mr-16 hidden md:flex items-center gap-4`}
+            pathname === "/" ? "bg-[#062D3E]" : ""
+          } px-[120px] py-[12px] -mr-16 hidden md:flex items-center gap-4 `}
         >
           <Link
             href="/login"
-            className="text-sm text-orange-500 hover:text-orange-300"
+            className="text-sm text-orange-500 hover:text-orange-300 "
           >
             Log in
           </Link>
@@ -58,7 +56,6 @@ export default function Header() {
           </Link>
         </div>
 
-        {/* Mobile menu toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden text-orange-500"
@@ -67,22 +64,18 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile Nav */}
       {mobileOpen && (
         <div className="md:hidden bg-[#EFE6D0] px-6 pb-4">
           <nav className="flex flex-col gap-4">
-            <Link href="/" className="text-sm hover:text-orange-600">
-              Home
-            </Link>
-            <Link href="#" className="text-sm hover:text-orange-600">
-              Brand
-            </Link>
-            <Link href="#" className="text-sm hover:text-orange-600">
-              Products
-            </Link>
-            <Link href="#" className="text-sm hover:text-orange-600">
-              Reviews
-            </Link>
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="text-sm hover:text-orange-600"
+              >
+                {link.label}
+              </Link>
+            ))}
           </nav>
           <div className="mt-4 flex flex-col gap-2">
             <Link href="/login" className="text-sm hover:text-orange-600">

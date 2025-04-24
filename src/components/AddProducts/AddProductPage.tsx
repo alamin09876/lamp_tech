@@ -34,60 +34,62 @@ export default function AddProductPage() {
   };
 
   return (
-    <div className="flex h-screen">
-      <aside className="w-1/5 bg-orange-600 text-white flex flex-col items-center py-8">
-        <div className="font-bold text-2xl mb-8">Shop-First</div>
-        <div className=" px-8 flex bg-[#062D3E] gap-3">
-          <div className="pt-3">
-            <TbCertificate2 className="" />
+    <div className="flex flex-col md:flex-row min-h-screen">
+      {/* Sidebar */}
+      <aside className="w-full md:w-1/5 bg-orange-600 text-white flex flex-row md:flex-col justify-between md:items-center px-4 py-4 md:py-8">
+        <div className="flex flex-col md:items-center md:gap-8 w-full">
+          <div className="font-bold text-xl md:text-2xl mb-4 md:mb-8">
+            Shop-First
           </div>
-          <div className="rounded py-2 cursor-pointer font-medium">
-            Products
+          <div className="flex items-center gap-2 bg-[#062D3E] px-4 py-2 rounded">
+            <TbCertificate2 />
+            <span className="font-medium">Products</span>
           </div>
         </div>
       </aside>
 
-      <main className="flex-1 bg-gray-100 p-8">
-        <div className="flex justify-between items-center mb-6">
-          <div className="flex gap-3">
-            <div className=" bg-[#ED5C01] text-white p-2 rounded-4xl">
-              <Link href={"/dashboard"}>
-                <FaArrowLeft className="" />
+      {/* Main Content */}
+      <main className="flex-1 bg-gray-100 p-4 md:p-8">
+        {/* Header */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+          <div className="flex gap-3 items-center">
+            <div className="bg-[#ED5C01] text-white p-2 rounded-4xl">
+              <Link href="/dashboard">
+                <FaArrowLeft />
               </Link>
             </div>
-            <div>
-              <h1 className="text-2xl font-bold">Products</h1>
-            </div>
+            <h1 className="text-xl md:text-2xl font-bold">Products</h1>
           </div>
-          <div className="flex gap-4">
+          <div className="flex gap-4 items-center">
             <Image
               src={image}
-              width={50}
-              height={50}
+              width={40}
+              height={40}
               alt="Decoration"
-              className="pt-6"
+              className="pt-2 md:pt-6"
             />
-            <div className="pt-6">
+            <div className="pt-2 md:pt-6">
               <Image
                 src={imageOne}
-                width={50}
-                height={50}
+                width={40}
+                height={40}
                 alt="Decoration"
-                className=" bg-[#ED5C01] rounded-4xl p-2"
+                className="bg-[#ED5C01] rounded-4xl p-2"
               />
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-xl shadow p-6">
-          <div className="bg-blue-900 text-white text-lg font-semibold px-4 py-2 rounded-t-md">
+        {/* Form Card */}
+        <div className="bg-white rounded-xl shadow p-4 md:p-6">
+          <div className="bg-[#062D3E] text-white text-base md:text-lg font-semibold px-4 py-2 rounded-t-md">
             Add Products
           </div>
           <form className="p-4 space-y-4" onSubmit={handleSubmit}>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium mb-1">
-                  Products Name <span className="text-red-500">*</span>
+                  Product Name <span className="text-red-500">*</span>
                 </label>
                 <input
                   className="w-full border p-2 rounded"

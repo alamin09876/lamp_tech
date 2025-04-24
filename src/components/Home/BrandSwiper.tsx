@@ -40,7 +40,6 @@ const BrandSwiper = () => {
   return (
     <div className="relative bg-[#fff4e0] py-12 clip-wrapper">
       <div className="grid lg:grid-cols-12 col-span-1 gap-4">
-        {/* Left Image - Hidden on small devices */}
         <div className="hidden lg:block lg:col-span-1">
           <Image
             src={imageTwo}
@@ -51,12 +50,10 @@ const BrandSwiper = () => {
           />
         </div>
 
-        {/* Title */}
         <div className="col-span-12 lg:col-span-10 text-center lg:text-left">
-          <h2 className="text-2xl">Our Brands</h2>
+          <h2 className="text-4xl">Our Brands</h2>
         </div>
 
-        {/* Right Image - Hidden on small devices */}
         <div className="hidden lg:block lg:col-span-1">
           <Image
             src={imageOne}

@@ -17,7 +17,7 @@ export default function LogIn() {
     e.preventDefault();
     try {
       await login(email, password);
-      router.push("/dashboard"); // Redirect after login
+      router.push("/dashboard");
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       alert(
@@ -27,8 +27,11 @@ export default function LogIn() {
   };
 
   return (
-    <div className="flex min-h-screen">
-      <div className="w-full md:w-1/2 bg-[#f7ebd9] flex items-center justify-center px-6 py-12">
+    <div className="min-h-screen flex flex-col md:flex-row">
+      {/* Image section for small & large devices */}
+
+      {/* Form Section */}
+      <div className="w-full md:w-1/2 bg-[#f7ebd9] flex items-center justify-center px-4 sm:px-8 py-12">
         <div className="w-full max-w-md">
           <h2 className="text-2xl md:text-3xl font-semibold text-center mb-8 text-[#102030]">
             Log In
@@ -53,20 +56,18 @@ export default function LogIn() {
               <label className="block text-sm font-medium text-[#102030] mb-1">
                 Password <span className="text-red-500">*</span>
               </label>
-              <div className="flex justify-between items-center">
-                <input
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="**********"
-                  className="w-full px-4 py-2 border rounded-md bg-white text-[#102030] focus:outline-orange-400"
-                  required
-                />
-              </div>
-              <div className="flex justify-end">
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="**********"
+                className="w-full px-4 py-2 border rounded-md bg-white text-[#102030] focus:outline-orange-400"
+                required
+              />
+              <div className="flex justify-end mt-2">
                 <Link
                   href="#"
-                  className="ml-2 text-sm text-orange-500 hover:underline whitespace-nowrap"
+                  className="text-sm text-orange-500 hover:underline"
                 >
                   Forgot Password
                 </Link>
@@ -82,20 +83,22 @@ export default function LogIn() {
           </form>
 
           <p className="mt-4 text-center text-sm text-[#102030]">
-            Already have an account?{" "}
-            <Link href="/signup" className="text-orange-500 hover:underline">
+            Don&apos;t have an account?{" "}
+            <Link
+              href="/authentication"
+              className="text-orange-500 hover:underline"
+            >
               Sign up
             </Link>
           </p>
         </div>
       </div>
-
-      <div className="hidden md:flex w-1/2 bg-[#f7ebd9] items-end justify-center">
+      <div className="w-full md:w-1/2 bg-[#f7ebd9] flex justify-center items-end md:items-center py-6 md:py-0">
         <Image
           src={shoppingGirl}
           alt="Shopping Girl"
           width={400}
-          height={500}
+          height={600}
           className="object-contain"
         />
       </div>

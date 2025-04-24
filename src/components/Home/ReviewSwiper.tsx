@@ -47,7 +47,6 @@ const ReviewSwiper = () => {
 
   return (
     <div className="grid sm:grid-cols-2 gap-2 py-10 justify-between select-none">
-      {/* Left side image block */}
       <div>
         <div className="relative lg:ml-32">
           <Image
@@ -78,13 +77,12 @@ const ReviewSwiper = () => {
         </div>
       </div>
 
-      {/* Right side swiper block */}
       <div className="flex flex-col justify-center items-center gap-6 relative">
         <div>
-          <h2 className="text-[#062D3E] text-[22px] md:text-[26px] font-semibold text-center mt-10">
+          <h2 className="text-[#062D3E] text-[22px] md:text-[46px] font-semibold text-center mt-10">
             Customer Reviews
           </h2>
-          <div className="absolute -top-2 right-0 lg:left-[400px] lg-[300px]">
+          <div className="absolute -top-2 right-0 lg:left-[550px] lg-[300px]">
             <Image
               src={imageThree}
               width={350}
@@ -110,7 +108,7 @@ const ReviewSwiper = () => {
           {reviews.map((review, index) => (
             <SwiperSlide key={index}>
               <div
-                className="bg-white border border-[#C8C8C8] lg:p-6 p-4 text-[#333] lg:text-[16px] text-[10px] leading-relaxed shadow-md max-w-md relative"
+                className="bg-white border border-[#C8C8C8] lg:p-6 p-4 text-[#333] lg:text-[18px] text-[10px] leading-relaxed shadow-md max-w-md relative"
                 style={{
                   clipPath:
                     "polygon(11% 99%, 0 90%, 0 0, 100% 0, 100% 20%, 100% 86%, 89% 100%, 78% 86%, 68% 99%, 55% 89%, 42% 100%, 28% 89%)",
@@ -122,8 +120,7 @@ const ReviewSwiper = () => {
           ))}
         </Swiper>
 
-        {/* Navigation Arrows */}
-        <div className="flex items-center gap-2 mt-6">
+        <div className="flex items-center gap-2 mt-6 lg:ml-0 -ml-10">
           <button
             onClick={handlePrev}
             className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-800 transition-all shadow-md"

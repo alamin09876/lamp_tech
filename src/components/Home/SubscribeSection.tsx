@@ -6,7 +6,6 @@ import image from "../../../public/assest/reviewImage/review.png";
 const SubscribeSection = () => {
   return (
     <div className="flex flex-col md:flex-row w-full h-full">
-      {/* Left Section with Image */}
       <div className="bg-[#fcb900] md:w-1/2 flex justify-center items-center ">
         <Image
           src={image}
@@ -17,9 +16,8 @@ const SubscribeSection = () => {
         />
       </div>
 
-      {/* Right Section with Text and Form */}
       <div className="relative bg-[#e85d04] md:w-1/2 p-8 flex flex-col justify-center space-y-6">
-        <h2 className="text-2xl md:text-3xl font-semibold text-[#062D3E] leading-snug">
+        <h2 className="text-2xl md:text-4xl font-semibold text-[#062D3E] leading-snug">
           Subscribe & Get Fashion <br />
           Updatenews
         </h2>
@@ -33,7 +31,6 @@ const SubscribeSection = () => {
           <ArrowRight className="absolute right-0 top-2 text-white cursor-pointer" />
         </div>
 
-        {/* Decorative Image (top-right corner) */}
         <div className="absolute right-4 bottom-4">
           <Image
             src={imageOne}

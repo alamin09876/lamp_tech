@@ -19,7 +19,7 @@ const ProductCards = () => {
   return (
     <div className="pb-10">
       <div className="pl-20 py-10">
-        <h2 className="text-2xl">Our Best Products</h2>
+        <h2 className="text-5xl">Our Best Products</h2>
       </div>
       <div className="mx-20 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {cardData.map((card) => (
@@ -54,7 +54,7 @@ const ProductCards = () => {
                   ৳ 475
                 </span>
               </div>
-              <button className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors font-medium text-sm flex items-center justify-center gap-2">
+              <button className="w-full  text-black py-2 rounded-md border border-[black] transition-colors font-medium text-sm flex items-center justify-center gap-2">
                 <span>Add To Cart</span>
               </button>
             </div>
@@ -62,7 +62,7 @@ const ProductCards = () => {
         ))}
       </div>
       <div>
-        <button className="w-32 mt-10  mx-auto bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors font-medium text-sm flex items-center justify-center gap-2">
+        <button className="w-32 mt-10  mx-auto bg-[#062D3E] text-white py-2 rounded-md  transition-colors font-medium text-sm flex items-center justify-center gap-2">
           <span className="">Learn More</span>
         </button>
       </div>
