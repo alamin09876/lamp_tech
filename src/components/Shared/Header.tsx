@@ -1,10 +1,14 @@
 "use client";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname(); // Get current path
+
+  const isHome = pathname === "/";
 
   return (
     <header className="text-[#102030] bg-[#ebe3cc] pt-4">
@@ -34,8 +38,12 @@ export default function Header() {
           </Link>
         </nav>
 
-        {/* Auth Buttons */}
-        <div className="bg-[#062D3E] px-[120px] py-2 -mr-16 hidden md:flex items-center gap-4">
+        {/* Auth Buttons (only dark bg on home page) */}
+        <div
+          className={`${
+            isHome ? "bg-[#062D3E]" : ""
+          } px-[120px] py-2 -mr-16 hidden md:flex items-center gap-4`}
+        >
           <Link
             href="/login"
             className="text-sm text-orange-500 hover:text-orange-300"
