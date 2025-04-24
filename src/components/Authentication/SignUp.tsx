@@ -36,7 +36,6 @@ const SignUp = () => {
     setLoading(true);
     setMessage(null);
 
-    // Simple validation before request
     if (!form.name || !form.email || !form.phone || !form.password) {
       setMessage("All fields are required.");
       setLoading(false);
@@ -44,7 +43,7 @@ const SignUp = () => {
     }
 
     try {
-      console.log("Submitting signup data:", form); // Debug log
+      console.log("Submitting signup data:", form);
 
       const res = await api.post("/public/user/store", form);
       setMessage("Signup successful!");
@@ -52,7 +51,7 @@ const SignUp = () => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       if (err.response) {
-        console.error("API error response:", err.response.data); // Debug log
+        console.error("API error response:", err.response.data);
         setMessage(
           err.response.data.message ||
             "Signup failed. Please check your inputs."
@@ -68,7 +67,6 @@ const SignUp = () => {
 
   return (
     <div className="flex flex-col md:flex-row min-h-screen bg-[#f5ecd7]">
-      {/* Form Section */}
       <div className="w-full md:w-1/2 flex items-center justify-center p-8">
         <form onSubmit={handleSubmit} className="w-full max-w-md space-y-6">
           <h2 className="text-2xl md:text-3xl font-semibold text-center">
@@ -155,7 +153,6 @@ const SignUp = () => {
         </form>
       </div>
 
-      {/* Image Section */}
       <div className="w-full md:w-1/2 flex items-end justify-center p-4">
         <Image
           src={modelImage}
