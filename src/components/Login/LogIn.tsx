@@ -28,9 +28,6 @@ export default function LogIn() {
 
   return (
     <div className="min-h-screen flex flex-col md:flex-row">
-      {/* Image section for small & large devices */}
-
-      {/* Form Section */}
       <div className="w-full md:w-1/2 bg-[#f7ebd9] flex items-center justify-center px-4 sm:px-8 py-12">
         <div className="w-full max-w-md">
           <h2 className="text-2xl md:text-3xl font-semibold text-center mb-8 text-[#102030]">

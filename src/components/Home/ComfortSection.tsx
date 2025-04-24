@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FaArrowUp } from "react-icons/fa";
 import imageOne from "../../../public/assest/comfortImage/Frame (1).png";
 import imageTwo from "../../../public/assest/comfortImage/Frame.png";
 import image from "../../../public/assest/comfortImage/Union.png";
@@ -52,27 +53,12 @@ const ComfortSection = () => {
         </button>
       </div>
 
-      {/* Top Right Circle Arrow */}
-      <div className="absolute top-20 right-6 z-30">
-        <div className="bg-white text-[#FF6B6B] rounded-full p-2 shadow-md hover:scale-105 transition cursor-pointer">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M5 15l7-7 7 7"
-            />
-          </svg>
+      <div className="absolute top-20 right-6 z-30 bg-white rounded-4xl p-1">
+        <div className=" text-[#ED5C01] rounded-full p-2 shadow-md hover:scale-105 transition cursor-pointer border border-[#ED5C01]">
+          <FaArrowUp />
         </div>
       </div>
 
-      {/* Right Brush Decoration */}
       <div className="absolute bottom-6 right-0 hidden lg:block">
         <Image
           src={imageTwo}

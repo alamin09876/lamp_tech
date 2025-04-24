@@ -8,7 +8,6 @@ import imageOne from "../../../public/assest/brandImage/Group 143725941.png";
 const BrandName = () => {
   return (
     <div className="grid lg:grid-cols-12 col-span-1 gap-4 bg-[#ED5C01] py-6 justify-items-center px-4">
-      {/* First left-side logo */}
       <div className="lg:col-span-1 flex justify-center items-center">
         <Image
           src={image}
@@ -19,7 +18,6 @@ const BrandName = () => {
         />
       </div>
 
-      {/* Main Brand image */}
       <div className="lg:col-span-4 flex justify-center items-center">
         <Image
           src={imageOne}
@@ -30,7 +28,6 @@ const BrandName = () => {
         />
       </div>
 
-      {/* Two stacked small items */}
       <div className="lg:col-span-1 flex flex-row lg:flex-col items-center gap-4 lg:gap-8">
         {[imageTwo, imageFour].map((img, index) => (
           <div
@@ -47,7 +44,6 @@ const BrandName = () => {
         ))}
       </div>
 
-      {/* Special offer image */}
       <div className="lg:col-span-2 flex justify-center items-center">
         <Image
           src={imageThree}
@@ -58,7 +54,6 @@ const BrandName = () => {
         />
       </div>
 
-      {/* Repeated small brand sections */}
       {[1, 2, 3, 4].map((item) => (
         <div
           key={item}

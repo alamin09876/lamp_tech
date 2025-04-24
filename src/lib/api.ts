@@ -15,7 +15,6 @@ export const setAuthToken = (token: string | null) => {
   }
 };
 
-// Signup
 interface SignupPayload {
   name: string;
   email: string;
@@ -27,7 +26,6 @@ export const signup = async (data: SignupPayload) => {
   return response.data;
 };
 
-// Create Product
 interface ProductPayload {
   product_name: string;
   product_price: string;

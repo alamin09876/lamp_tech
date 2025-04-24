@@ -48,7 +48,6 @@ export default function ProductsPage() {
 
   return (
     <div className="flex flex-col lg:flex-row h-screen overflow-auto">
-      {/* Sidebar or top bar */}
       <aside className="w-full lg:w-1/5 bg-orange-600 text-white flex lg:flex-col items-center justify-between lg:justify-start py-4 px-4">
         <div className="font-bold text-xl lg:text-2xl mb-4 lg:mb-8">
           Shop-First
@@ -74,7 +73,6 @@ export default function ProductsPage() {
           </div>
         </div>
 
-        {/* Search and add button */}
         <div className="mb-6 flex flex-col sm:flex-row gap-4 w-full">
           <div className="lg:w-[300px] w-full">
             <input
@@ -91,7 +89,6 @@ export default function ProductsPage() {
           </Link>
         </div>
 
-        {/* Table or stacked layout */}
         <div className="pb-8">
           <div className="hidden lg:block">
             <table className="w-full bg-white rounded-lg shadow overflow-hidden mb-10">
@@ -125,7 +122,6 @@ export default function ProductsPage() {
             </table>
           </div>
 
-          {/* Mobile Card View */}
           <div className="lg:hidden flex flex-col gap-4">
             {filteredProducts.map((product, index) => (
               <div

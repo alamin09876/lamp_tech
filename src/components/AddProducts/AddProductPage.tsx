@@ -48,9 +48,7 @@ export default function AddProductPage() {
         </div>
       </aside>
 
-      {/* Main Content */}
       <main className="flex-1 bg-gray-100 p-4 md:p-8">
-        {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
           <div className="flex gap-3 items-center">
             <div className="bg-[#ED5C01] text-white p-2 rounded-4xl">
@@ -80,7 +78,6 @@ export default function AddProductPage() {
           </div>
         </div>
 
-        {/* Form Card */}
         <div className="bg-white rounded-xl shadow p-4 md:p-6">
           <div className="bg-[#062D3E] text-white text-base md:text-lg font-semibold px-4 py-2 rounded-t-md">
             Add Products
